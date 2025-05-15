@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Freiberufler Buchhaltung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-content">
+        <div class="dashboard-header">
+            <div class="header-icon">
+                <i class="fas fa-th-large"></i>
+                <h1>Dashboard</h1>
+            </div>
+            <p>Deine Gesamtübersicht über Produktivität, Projekte, Dokumente und Finanzen.</p>
+        </div>
+
+        <div class="setup-notice">
+            Die Einrichtung ist noch nicht vollständig abgeschlossen. 
+            <a href="#">Jetzt vervollständigen</a>
+        </div>
+
+        <div class="dashboard-grid">
+            <!-- Produktivität -->
+            <div class="productivity-chart">
+                <div class="chart-header">
+                    <h2>Produktivität</h2>
+                    <span class="date-range">12.05.2025 – 18.05.2025 (KW 20)</span>
+                </div>
+                <div class="week-chart">
+                    <canvas id="weeklyChart"></canvas>
+                </div>
+                <div class="hours-summary">
+                    <div class="current-hours">0h</div>
+                    <div class="target-hours">von 40h</div>
+                </div>
+                <a href="#" class="more-link">Mehr</a>
+            </div>
+
+            <!-- Meine Projekte -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>Meine Projekte</h2>
+                    <button class="btn btn-primary">+</button>
+                </div>
+                <div class="empty-state">
+                    Kein aktives Projekt vorhanden.<br>
+                    Erstelle <a href="#">hier</a> ein neues Projekt.
+                </div>
+                <a href="#" class="more-link">Mehr</a>
+            </div>
+
+            <!-- Dokumente -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>Dokumente</h2>
+                </div>
+                <div class="tab-group">
+                    <div class="tab active">Posteingang</div>
+                    <div class="tab">Rechnungen</div>
+                    <div class="tab">Angebote</div>
+                </div>
+                <div class="empty-state">
+                    Dein Posteingang ist leer.<br>
+                    Lade einfach neue Belege <a href="#">hier</a> hoch.
+                </div>
+                <a href="#" class="more-link">Mehr</a>
+            </div>
+
+            <!-- Finanzen -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>Finanzen</h2>
+                </div>
+                <div class="finance-summary">
+                    <div>
+                        <h3>Abrechenbar</h3>
+                        <div class="amount">€ 0</div>
+                        <div class="label">netto</div>
+                    </div>
+                    <div>
+                        <h3>Offene Posten</h3>
+                        <div class="amount">€ 0</div>
+                        <div class="label">brutto</div>
+                    </div>
+                </div>
+                <canvas id="financeChart"></canvas>
+                <a href="#" class="more-link">Mehr</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

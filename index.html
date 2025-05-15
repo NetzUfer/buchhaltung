@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freiberufler Buchhaltung</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <i class="fas fa-laptop nav-icon"></i>
+        <i class="fas fa-folder nav-icon"></i>
+        <i class="fas fa-clock nav-icon"></i>
+        <i class="fas fa-plus nav-icon"></i>
+        <i class="fas fa-minus nav-icon"></i>
+        <i class="fas fa-chart-bar nav-icon"></i>
+    </nav>
+
+    <nav class="side-nav">
+        <h2>Übersicht</h2>
+        <div class="menu">
+            <a href="dashboard.html" class="menu-item active">
+                <i class="fas fa-th-large"></i>
+                Dashboard
+            </a>
+            <a href="inbox.html" class="menu-item">
+                <i class="fas fa-inbox"></i>
+                Posteingang
+            </a>
+            <a href="outbox.html" class="menu-item">
+                <i class="fas fa-paper-plane"></i>
+                Postausgang
+            </a>
+            <a href="getting-started.html" class="menu-item">
+                <i class="fas fa-flag"></i>
+                Erste Schritte
+                <span class="notification-dot"></span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div id="content">
+            <!-- Dynamischer Inhalt wird hier geladen -->
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

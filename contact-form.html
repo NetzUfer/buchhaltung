@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuer Kontakt - Freiberufler Buchhaltung</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h2>Neuer Kontakt</h2>
+            <button class="btn btn-primary">Kontakt speichern</button>
+        </div>
+
+        <div class="tab-group">
+            <div class="tab active">Allgemein/Kontaktdaten</div>
+            <div class="tab">Rechnungsstellung</div>
+            <div class="tab">Bankdaten</div>
+            <div class="tab">Personen</div>
+            <div class="tab">Eigene Felder</div>
+        </div>
+
+        <form class="contact-form">
+            <div class="form-section">
+                <h3>Allgemein</h3>
+                
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-type">Art des Kontakts:</label>
+                    <select id="contact-type" name="contact-type" class="form-control">
+                        <option>Kunde</option>
+                        <option>Lieferant</option>
+                        <option>Sonstiges</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefon:</label>
+                    <input type="tel" id="phone" name="phone" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="fax">Fax:</label>
+                    <input type="tel" id="fax" name="fax" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-Mail:</label>
+                    <input type="email" id="email" name="email" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="vat-id">Umsatzsteuer-IdNr.:</label>
+                    <div class="input-group">
+                        <input type="text" id="vat-id" name="vat-id" class="form-control">
+                        <button type="button" class="btn btn-outline">Prüfen</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Adresse</h3>
+                
+                <div class="form-group">
+                    <label for="street">Straße:</label>
+                    <input type="text" id="street" name="street" class="form-control">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="postal-code">PLZ:</label>
+                        <input type="text" id="postal-code" name="postal-code" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">Ort:</label>
+                        <input type="text" id="city" name="city" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Land:</label>
+                    <select id="country" name="country" class="form-control">
+                        <option>Deutschland</option>
+                        <option>Österreich</option>
+                        <option>Schweiz</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

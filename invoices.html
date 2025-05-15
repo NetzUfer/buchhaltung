@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rechnungen - Freiberufler Buchhaltung</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="invoices.css">
+</head>
+<body>
+    <div class="content-container">
+        <div class="page-header">
+            <div class="header-title">
+                <i class="fas fa-file-invoice"></i>
+                <div>
+                    <h1>Rechnungen</h1>
+                    <p class="subtitle">Übersicht deiner Rechnungen an Kunden</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-outline">
+                    <i class="fas fa-clock"></i>
+                    Neu aus erfassten Leistungen
+                </button>
+                <button class="btn btn-primary">
+                    <i class="fas fa-plus"></i>
+                    Neue Rechnung
+                </button>
+            </div>
+        </div>
+
+        <div class="action-bar">
+            <div class="left-actions">
+                <button class="btn btn-outline">
+                    <i class="fas fa-trash"></i>
+                    Löschen
+                </button>
+                <button class="btn btn-outline">
+                    <i class="fas fa-archive"></i>
+                    Archivieren
+                </button>
+                <button class="btn btn-outline">
+                    <i class="fas fa-file-pdf"></i>
+                    PDF
+                </button>
+            </div>
+            <div class="right-actions">
+                <button class="btn btn-outline">
+                    <i class="fas fa-file-csv"></i>
+                    CSV
+                </button>
+                <div class="filter-group">
+                    <span class="filter-label">Zustand:</span>
+                    <button class="btn btn-outline active">Aktiv</button>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">Jahr:</span>
+                    <select class="year-select">
+                        <option>2025</option>
+                    </select>
+                </div>
+                <button class="btn btn-outline">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="invoices-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="checkbox-column">
+                            <input type="checkbox" class="select-all">
+                        </th>
+                        <th>Rechnungsnr.</th>
+                        <th>Projekt/Kunde</th>
+                        <th>Status</th>
+                        <th class="sortable">
+                            Datum
+                            <i class="fas fa-sort"></i>
+                        </th>
+                        <th>Fällig am</th>
+                        <th class="amount-column">Betrag</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="empty-state">
+                        <td colspan="7">Keine Einträge vorhanden</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

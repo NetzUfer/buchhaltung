@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neue Zeiterfassung - Freiberufler Buchhaltung</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h2>Neue Zeiterfassung</h2>
+            <button class="btn btn-primary">Zeiterfassung speichern</button>
+        </div>
+
+        <form class="time-entry-form">
+            <div class="form-section">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Datum:</label>
+                        <input type="date" id="date" name="date" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="duration">Dauer (Stunden):</label>
+                        <input type="number" id="duration" name="duration" step="0.25" min="0" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="project">Projekt:</label>
+                    <select id="project" name="project" class="form-control">
+                        <option>Projekt auswählen...</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="task">Aufgabe:</label>
+                    <input type="text" id="task" name="task" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Beschreibung:</label>
+                    <textarea id="description" name="description" rows="4" class="form-control"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="billing-status">Abrechnungsstatus:</label>
+                    <select id="billing-status" name="billing-status" class="form-control">
+                        <option>Abrechenbar</option>
+                        <option>Nicht abrechenbar</option>
+                        <option>Bereits abgerechnet</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

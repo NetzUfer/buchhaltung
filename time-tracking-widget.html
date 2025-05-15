@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeiterfassung</title>
+    <link rel="stylesheet" href="time-tracking-widget.css">
+</head>
+<body>
+    <div class="time-tracking-widget">
+        <div class="widget-header">
+            <h2>Zeiterfassung</h2>
+            <div class="timer-status">
+                <span>Aktuell</span>
+                <span class="timer-duration">0m</span>
+            </div>
+        </div>
+
+        <form class="tracking-form">
+            <div class="form-group">
+                <label for="project">Kunde/Projekt:</label>
+                <input type="text" id="project" class="form-control" placeholder="Projekt auswählen...">
+            </div>
+
+            <div class="form-group">
+                <label for="task">Aufgabe:</label>
+                <input type="text" id="task" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="comment">Kommentar:</label>
+                <textarea id="comment" class="form-control" rows="3" placeholder="Kommentar"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="time">Zeit:</label>
+                <div class="time-input-group">
+                    <div class="date-picker">
+                        <button type="button" class="btn btn-outline">
+                            <i class="fas fa-calendar"></i> heute
+                        </button>
+                    </div>
+                    <span>bis</span>
+                    <div class="time-picker">
+                        <div class="timer-display">00:00:00</div>
+                        <button type="button" class="btn btn-start">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="billable">Abrechenbar:</label>
+                <div class="toggle-group">
+                    <button type="button" class="btn btn-toggle active">JA</button>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn btn-delete">
+                    <i class="fas fa-trash"></i>
+                </button>
+                <button type="submit" class="btn btn-primary">Speichern</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="time-tracking-widget.js"></script>
+</body>
+</html>

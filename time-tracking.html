@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeiterfassung - Freiberufler Buchhaltung</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="time-tracking.css">
+</head>
+<body>
+    <div class="content-container">
+        <div class="page-header">
+            <div class="header-icon">
+                <i class="fas fa-clock"></i>
+                <h1>Einzelbuchungen</h1>
+            </div>
+        </div>
+
+        <div class="tab-navigation">
+            <a href="#" class="tab">Wochenübersicht</a>
+            <a href="#" class="tab">Mitarbeiterübersicht</a>
+            <a href="#" class="tab active">Einzelbuchungen</a>
+        </div>
+
+        <div class="filter-bar">
+            <div class="filter-group">
+                <select class="filter-select">
+                    <option>Alle Mitarbeiter</option>
+                </select>
+                <select class="filter-select">
+                    <option>Alle Projekte</option>
+                </select>
+                <select class="filter-select">
+                    <option>Alle Abrechnungsstatus</option>
+                </select>
+                <select class="filter-select">
+                    <option>Gesamter Zeitraum</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="action-bar">
+            <div class="primary-actions">
+                <button class="btn btn-primary">+ Neue Zeiterfassung</button>
+            </div>
+            <div class="secondary-actions">
+                <button class="btn btn-outline">
+                    <i class="fas fa-trash"></i> Löschen
+                </button>
+                <button class="btn btn-outline">
+                    <i class="fas fa-archive"></i> Archivieren
+                </button>
+                <button class="btn btn-outline">Umbuchen</button>
+                <button class="btn btn-outline">Als nicht abrechenbar markieren</button>
+                <button class="btn btn-outline">Rechnung erstellen</button>
+            </div>
+            <div class="export-actions">
+                <button class="btn btn-outline">
+                    <i class="fas fa-file-csv"></i> CSV
+                </button>
+                <select class="year-select">
+                    <option>Jahr: 2025</option>
+                </select>
+                <button class="btn btn-outline">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="time-entries-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="sortable">Datum <i class="fas fa-sort"></i></th>
+                        <th>Projekt/Kunde</th>
+                        <th>Aufgabe</th>
+                        <th>Mitarbeiter</th>
+                        <th>Dauer</th>
+                        <th>Abgerechnet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="empty-state">
+                        <td colspan="6">Keine Einträge vorhanden</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

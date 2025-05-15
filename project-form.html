@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neues Projekt - Freiberufler Buchhaltung</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h2>Neues Projekt</h2>
+            <button class="btn btn-primary">Projekt speichern</button>
+        </div>
+
+        <form class="project-form">
+            <div class="form-section">
+                <h3>Projektdetails</h3>
+                
+                <div class="form-group">
+                    <label for="project-name">Projektname:</label>
+                    <input type="text" id="project-name" name="project-name" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="client">Kunde:</label>
+                    <select id="client" name="client" class="form-control">
+                        <option>Kunde auswählen...</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="start-date">Startdatum:</label>
+                        <input type="date" id="start-date" name="start-date" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="end-date">Enddatum:</label>
+                        <input type="date" id="end-date" name="end-date" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Budget</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="budget-type">Budgettyp:</label>
+                        <select id="budget-type" name="budget-type" class="form-control">
+                            <option>Festpreis</option>
+                            <option>Nach Aufwand</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="budget-amount">Budgetbetrag (€):</label>
+                        <input type="number" id="budget-amount" name="budget-amount" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="hourly-rate">Stundensatz (€):</label>
+                    <input type="number" id="hourly-rate" name="hourly-rate" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Beschreibung</h3>
+                
+                <div class="form-group">
+                    <label for="description">Projektbeschreibung:</label>
+                    <textarea id="description" name="description" class="form-control" rows="4"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neue Rechnung - Freiberufler Buchhaltung</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h2>Neue Rechnung</h2>
+            <div class="header-actions">
+                <button class="btn btn-outline">Vorschau</button>
+                <button class="btn btn-primary">Rechnung speichern</button>
+            </div>
+        </div>
+
+        <form class="invoice-form">
+            <div class="form-section">
+                <h3>Rechnungsdetails</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="invoice-number">Rechnungsnummer:</label>
+                        <input type="text" id="invoice-number" name="invoice-number" class="form-control" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="invoice-date">Rechnungsdatum:</label>
+                        <input type="date" id="invoice-date" name="invoice-date" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="client">Kunde:</label>
+                    <select id="client" name="client" class="form-control">
+                        <option>Kunde auswählen...</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="project">Projekt:</label>
+                    <select id="project" name="project" class="form-control">
+                        <option>Projekt auswählen...</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Positionen</h3>
+                
+                <table class="items-table">
+                    <thead>
+                        <tr>
+                            <th>Beschreibung</th>
+                            <th>Menge</th>
+                            <th>Einheit</th>
+                            <th>Einzelpreis</th>
+                            <th>MwSt.</th>
+                            <th>Gesamt</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="empty-state">
+                            <td colspan="7">
+                                Keine Positionen vorhanden
+                                <button type="button" class="btn btn-outline">Position hinzufügen</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td>Netto:</td>
+                            <td>€ 0,00</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td>MwSt. (19%):</td>
+                            <td>€ 0,00</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td><strong>Gesamt:</strong></td>
+                            <td><strong>€ 0,00</strong></td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <div class="form-section">
+                <h3>Zahlungsinformationen</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="payment-terms">Zahlungsziel (Tage):</label>
+                        <input type="number" id="payment-terms" name="payment-terms" class="form-control" value="14">
+                    </div>
+                    <div class="form-group">
+                        <label for="due-date">Fällig am:</label>
+                        <input type="date" id="due-date" name="due-date" class="form-control" readonly>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Bemerkungen:</label>
+                    <textarea id="notes" name="notes" rows="4" class="form-control"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="invoice-form.js"></script>
+</body>
+</html>
